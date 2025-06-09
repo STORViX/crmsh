@@ -23,8 +23,8 @@
 
 import collections
 
-# Make CRMSH work with Python 3.11.
-# Class collections.MutableSet was moved to collections.abc.MutableSet in Python 3.10.
+# Make CRMSH work with Python > 3.9.
+# Class collections.MutableSet was moved to collections.abc.MutableSet after Python version 3.9.
 # This will make it available again at collections.MutableSet.
 if not hasattr( collections, "MutableSet" ):
     from collections.abc import MutableSet
