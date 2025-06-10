@@ -7,6 +7,12 @@ import inspect
 from .msg import bad_usage, common_err
 from . import utils
 
+# Make CRMSH work with Python > 3.9.
+# Function inspect.getargspec was renamed to inspect.getfullargspec after Python 3.9.
+# This will make it available again at inspect.getargspec.
+if not hasattr( inspect, "getargspec" ):
+    inspect.getargspec = inspect.getfullargspec
+
 
 def _get_attr_cmd(attr_ext_commands, subcmd):
     try:
