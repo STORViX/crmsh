@@ -27,7 +27,7 @@ def configure_libdir():
     sysconfig is only available in 2.7 and above
     MULTIARCH is a debian specific configuration variable
     '''
-    dirs = ('/usr/lib64', '/usr/libexec', '/usr/lib',
+    dirs = ('/usr/lib64', '/usr/libexec', '/usr/libexec/amd64', '/usr/lib',
             '/usr/local/lib64', '/usr/local/libexec', '/usr/local/lib')
     try:
         import sysconfig
